@@ -1,5 +1,5 @@
-const noteObject = {
+const note = [
 
-};
+];
 
-module.exports = noteObject;
+module.exports = note;
