@@ -1,6 +1,6 @@
 // Dependencies
 const express = require('express');
-const path = require('path');
+
 
 // Set up express
 const app = express();
@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
+require('./routes/htmlroutes')(app);
 
 
 
