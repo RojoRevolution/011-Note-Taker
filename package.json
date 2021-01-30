@@ -1,0 +1,23 @@
+{
+  "name": "011-Note-Taker",
+  "version": "1.0.0",
+  "description": "A web app that allows you to take notes built using Express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RojoRevolution/011-Note-Taker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RojoRevolution/011-Note-Taker/issues"
+  },
+  "homepage": "https://github.com/RojoRevolution/011-Note-Taker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
