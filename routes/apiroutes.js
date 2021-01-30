@@ -9,9 +9,9 @@ module.exports = (app) => {
 
     app.post('/api/notes', (req, res) => {
         console.log(req)
-        const newNote = req.body;
+        const newNote = JSON.stringify(req.body);
 
-        fs.writeFile(dbJSON, newNote, (err) => {
+        fs.writeFile('db/db.json', newNote, (err) => {
             if (err) throw err;
             console.log('Body added to DB')
         })
