@@ -2,7 +2,7 @@
   "name": "011-Note-Taker",
   "version": "1.0.0",
   "description": "A web app that allows you to take notes built using Express.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
