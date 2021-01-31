@@ -13,11 +13,16 @@ var uniqid = require('uniqid');
 
 module.exports = (app) => {
 
-    // Get dbJSON from path /api/notes
-    app.get('/api/notes', (req, res) => res.json(dbJSON))
+    app.get('/api/notes', (req, res) => {
+        fs.readFile('db/db.json', 'utf8', (err, data) => {
+            if (err) { console.err(err) }
+            else {
+                res.json(JSON.parse(data))
+            }
+        })
+    })
 
     app.post('/api/notes', (req, res) => {
-
         fs.readFile('db/db.json', 'utf8', (err, data) => {
             if (err) {
                 console.err(err);
@@ -37,9 +42,32 @@ module.exports = (app) => {
                 fs.writeFile('db/db.json', JSON.stringify(notesDb), (err) => {
                     if (err) throw err;
                     console.log('Body added to DB');
+                    // this res.json should sending the latest information - doesn't matter for this app, but it would matter if the front end was making use of the data in some way
+                    res.json(notesDb);
                 });
-                res.json(dbJSON);
             };
         });
     });
+
+    // Deleting Notes
+    app.get('/api/notes/:id', (req, res) => {
+        const dltById = req.params.id;
+        console.log(dltById);
+        fs.readFile('db/db.json', 'utf8', (err, data) => {
+            if (err) { console.err(err) }
+            else {
+                for (let i = 0; data.length; i++) {
+                    if (dltById === data[i].routename) {
+                        return res.json(data[i]);
+                    } else {
+                        return res.json(false)
+                    }
+                }
+
+                // res.json(JSON.parse(data))
+            }
+        })
+    });
+
+
 };
