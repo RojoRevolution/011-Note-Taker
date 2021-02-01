@@ -1,17 +1,7 @@
 [
     {
-        "title": "Cool Note",
-        "text": "Bro",
+        "title": "Test Note",
+        "text": "Test Text",
         "id": "3loqtm2kkkmrpr8"
-    },
-    {
-        "title": "This is my second note",
-        "text": "Second Note",
-        "id": "3loqtmfkkkms1vc"
-    },
-    {
-        "title": "This is a note",
-        "text": "Suck it!",
-        "id": "3loquxpkkkpbpbn"
     }
 ]
