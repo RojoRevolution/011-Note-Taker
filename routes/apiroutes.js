@@ -6,10 +6,6 @@ const fs = require('fs');
 module.uniqid_debug = true;
 var uniqid = require('uniqid');
 
-// const noteData = require('../data/noteData');
-
-
-
 
 module.exports = (app) => {
 
@@ -50,24 +46,14 @@ module.exports = (app) => {
     });
 
     // Deleting Notes
-    app.get('/api/notes/:id', (req, res) => {
-        const dltById = req.params.id;
-        console.log(dltById);
-        fs.readFile('db/db.json', 'utf8', (err, data) => {
-            if (err) { console.err(err) }
-            else {
-                for (let i = 0; data.length; i++) {
-                    if (dltById === data[i].routename) {
-                        return res.json(data[i]);
-                    } else {
-                        return res.json(false)
-                    }
-                }
+    // app.delete('/api/notes', (req, res) => {
+    //     // console.log(req)
+    //     res.send('<h1>This is Working!<h1>')
+    //     const noteID = req.params.id;
+    //     console.log(noteID);
 
-                // res.json(JSON.parse(data))
-            }
-        })
-    });
+
+    // });
 
 
 };
