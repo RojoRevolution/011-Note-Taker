@@ -61,6 +61,9 @@ const renderActiveNote = () => {
   } else {
     noteTitle.value = '';
     noteText.value = '';
+    // This was missing in the original prewritten file provided to us for the homework. It was breaking the ability to add a new note if you had previously clicked on a note in the left hand column 
+    noteTitle.removeAttribute('readonly');
+    noteText.removeAttribute('readonly');
   }
 };
 
