@@ -2,7 +2,7 @@
 
 [Visit the Depoloyed Site](https://noter-taker-rojo.herokuapp.com/notes)
 
-![Image of Yaktocat](images/note_recording.gif)
+![Image of Yaktocat](images/app_image.png)
 
 
 # :zap: Description
